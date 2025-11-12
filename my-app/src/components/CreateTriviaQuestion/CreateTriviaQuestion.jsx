@@ -1,17 +1,42 @@
 import React, { useState } from "react";
 import "./CreateTriviaQuestion.css";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function CreateTriviaQuestion() {
   const [question, setQuestion] = useState("");
   const [difficulty, setDifficulty] = useState("");
   const navigate = useNavigate();
 
+  // Clear form
+  const handleClear = () => {
+    setQuestion("");
+    setDifficulty("");
+  };
+
+  // Submit (placeholder)
+  const handleSubmit = () => {
+  if (!question || !difficulty) {
+    alert("Please enter a question and select difficulty.");
+    return;
+  }
+
+  navigate("/ai-response", {
+    state: {
+      question,
+      difficulty,
+    },
+  });
+};
+
+
   return (
+    //////////////////// header
     <div className="ctq-wrapper">
       {/* Top Header */}
       <div className="ctq-header">
-        <button className="ctq-back" onClick={() => navigate("/")}>&lt;</button>
+        <button className="ctq-back" onClick={() => navigate("/")}>
+          &lt;
+        </button>
         <h2>Create Trivia Questions</h2>
       </div>
 
@@ -33,9 +58,15 @@ function CreateTriviaQuestion() {
       <div className="ctq-pane dark">
         <label className="ctq-pane-label">Select a preset question</label>
         <div className="ctq-button-row">
-          <button>Preset Question 1</button>
-          <button>Preset Question 2</button>
-          <button>Preset Question 3</button>
+          <button onClick={() => setQuestion("What is the capital of France?")}>
+            Preset Question 1
+          </button>
+          <button onClick={() => setQuestion("Who wrote Hamlet?")}>
+            Preset Question 2
+          </button>
+          <button onClick={() => setQuestion("What is 2 + 2?")}>
+            Preset Question 3
+          </button>
         </div>
       </div>
 
@@ -81,7 +112,8 @@ function CreateTriviaQuestion() {
       <div className="ctq-section">
         <label className="ctq-label black">Preview</label>
         <div className="ctq-preview-box">
-          {/* AI preview would go here */}
+          <p>{question || "Your question will appear here..."}</p>
+          {difficulty && <p>Difficulty: {difficulty}</p>}
         </div>
         <p className="ctq-tip">
           Preview of how your question will appear to classmates.
@@ -90,15 +122,21 @@ function CreateTriviaQuestion() {
 
       {/* Action Buttons */}
       <div className="ctq-actions">
-        <button className="action draft">Save as Draft</button>
-        <button className="action clear">Clear</button>
-        <button className="action submit">Submit to AI</button>
+        <button className="action draft" onClick={() => console.log("Draft saved:", { question, difficulty })}>
+          Save as Draft
+        </button>
+        <button className="action clear" onClick={handleClear}>
+          Clear
+        </button>
+        <button className="action submit" onClick={handleSubmit}>
+          Submit to AI
+        </button>
       </div>
 
       {/* Dashboard */}
       <div className="ctq-dashboard">
         <div className="ctq-separator" />
-        <button className="dashboard-icon">🏠</button>
+        <button className="dashboard-icon" onClick={() => navigate("/")}>🏠</button>
         <p>Dashboard</p>
       </div>
     </div>
