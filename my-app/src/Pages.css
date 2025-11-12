@@ -1,0 +1,41 @@
+/* Pages.css */
+
+/* Reset */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+/* Default centered layout */
+body .page-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #dca06f;
+}
+
+/* Card container */
+.card {
+  width: 402px;
+  background-color: #faf0e6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Divider line */
+.divider {
+  width: 100%;
+  border-top: 2px dashed #000;
+  margin: 0;
+}
+
+/* Footer bar */
+.footer {
+  width: 100%;
+  background-color: #faf0e6;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem 1rem;
+}

@@ -1,0 +1,187 @@
+.ctq-wrapper {
+  max-width: 400px;
+  margin: auto;
+  background-color: #faf0e6;
+  font-family: Roboto, sans-serif;
+  padding-bottom: 2rem;
+}
+
+.ctq-header {
+  background-color: #5b7c99;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+.ctq-back {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.ctq-section {
+  margin: 1rem;
+}
+
+.ctq-label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.ctq-label.black {
+  color: black;
+}
+
+.ctq-textarea {
+  width: 100%;
+  height: 150px;
+  background-color: #faf0e6;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.ctq-tip {
+  font-size: 0.8rem;
+  color: #00000086;
+  margin-top: 0.5rem;
+}
+
+.ctq-pane {
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.ctq-pane.dark {
+  background-color: #36454f;
+  color: white;
+}
+
+.ctq-pane.orange {
+  background-color: #fb8b24;
+  color: white;
+}
+
+.ctq-pane-label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.ctq-subtext {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.ctq-button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.ctq-button-row button {
+  background-color: #cdd0d3;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 6px;
+  flex: 1;
+  min-width: 100px;
+}
+
+.ctq-difficulty-row {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 0.5rem;
+}
+
+.circle-wrapper {
+  background-color: #ccc;
+  padding: 4px;
+  border-radius: 50%;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.easy {
+  background-color: green;
+}
+
+.medium {
+  background-color: yellow;
+}
+
+.hard {
+  background-color: red;
+}
+
+.selected {
+  outline: 2px solid black;
+}
+
+.ctq-preview-box {
+  border: 1px solid #ccc;
+  background-color: white;
+  height: 100px;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+}
+
+.ctq-actions {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.action {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  border: 1px solid #36454f;
+  text-align: center;
+}
+
+.draft,
+.clear {
+  background-color: #fbbb24;
+  color: #36454f;
+}
+
+.submit {
+  background-color: #36454f;
+  color: #fbbb24;
+  border-color: black;
+}
+
+.ctq-dashboard {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.ctq-separator {
+  height: 1px;
+  background-color: #ccc;
+  margin-bottom: 0.5rem;
+}
+
+.dashboard-icon {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
