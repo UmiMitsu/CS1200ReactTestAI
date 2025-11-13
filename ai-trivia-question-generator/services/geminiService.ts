@@ -2,14 +2,29 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { AIResponse } from '../types';
 
-if (!process.env.API_KEY) {
+if (!import.meta.env.VITE_API_KEY) {
   // In a real application, you'd want to handle this more gracefully.
   // For this example, we'll alert the user.
   // The environment variable is expected to be set by the platform.
-  console.error("API_KEY environment variable not set.");
+  console.error("VITE_API_KEY environment variable not set.");
   // alert("Error: Gemini API Key is not configured. Please contact support.");
 }
 
+function validateResponse(response: AIResponse): AIResponse {
+  let { answer, tone } = response;
+
+  // Fix common AI glitches
+  answer = answer.replace(/H\s*M\s*2\s*M\s*O/gi, "H₂O");
+  answer = answer.replace(/\s+/g, " ").trim();
+
+  // Ensure tone is one of expected values
+  const allowedTones = ["Formal", "Informative", "Casual", "Apologetic"];
+  if (!allowedTones.includes(tone)) {
+    tone = "Informative";
+  }
+
+  return { answer, tone };
+}
 
 const responseSchema = {
   type: Type.OBJECT,
@@ -42,8 +57,9 @@ const getAIResponse = async (prompt: string, systemInstruction: string): Promise
     });
     
     const jsonText = response.text.trim();
-    const parsedResponse = JSON.parse(jsonText);
-    return parsedResponse as AIResponse;
+    const parsedResponse = JSON.parse(jsonText) as AIResponse;
+    return validateResponse(parsedResponse);
+    // return parsedResponse as AIResponse;
 
   } catch (error) {
     console.error("Error calling Gemini API:", error);
