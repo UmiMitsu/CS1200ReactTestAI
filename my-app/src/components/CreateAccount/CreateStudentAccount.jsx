@@ -8,6 +8,7 @@ function CreateStudentAccount() {
   const navigate = useNavigate();
 
   return (
+  <div className="CAbackground">
     <div className="CApage-wrapper">
       <div className="CAcard">
 
@@ -74,6 +75,7 @@ function CreateStudentAccount() {
         </div>
       </div>
     </div>
+  </div>
   );
 }
 

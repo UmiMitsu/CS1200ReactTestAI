@@ -1,19 +1,27 @@
-/* Wrapper and card */
+.CAbackground {
+  background-color: #4165ba;
+}
 .CApage-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #dcb1b1;
+  background-color: #0f172a;   /* navy background */
 }
 
 .CAcard {
   width: 402px;
+  max-width: 95%;             /* responsive for smaller screens */
   background-color: #ffffff;
+  border: 3px solid #1e293b;   /* dark border */
+  border-radius: 20px;         /* rounded corners for mobile look */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4); /* subtle shadow */
   display: flex;
   flex-direction: column;
-  align-items: stretch;   /* changed: let children stretch to card width */
+  align-items: stretch;
+  overflow: hidden;            /* keep header/footer flush */
 }
+
 
 /* Header bar */
 .cs-header {
