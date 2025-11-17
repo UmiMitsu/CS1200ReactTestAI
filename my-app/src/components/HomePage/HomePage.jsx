@@ -16,7 +16,7 @@ function HomePage() {
         <div className="hp-divider" />
 
         {/* Blue buttons stacked */}
-        <button className="btn btn-blue" onClick={() => navigate("/create")}>
+        <button className="btn btn-blue" onClick={() => navigate("/login")}>
           Sign In
         </button>
         <button className="btn btn-blue" onClick={() => navigate("/about")}>

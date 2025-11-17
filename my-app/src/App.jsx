@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 
 ///////////////// Elena Wireframes
 import HomePage from "./components/HomePage/HomePage.jsx";
-// import SignIn from "./components/SignIn/SignIn.jsx";
+import Login from "./components/Login/Login.jsx";
 import CreateStudentAccount from "./components/CreateAccount/CreateStudentAccount.jsx";
 import CreateTeacherAccount from "./components/CreateAccount/CreateTeacherAccount.jsx";
 import About from "./components/About/About.jsx";
@@ -20,8 +20,9 @@ function App() {
       <Route path="/create-student" element={<CreateStudentAccount />} />
       <Route path="/create-teacher" element={<CreateTeacherAccount />} />
       <Route path="/about" element={<About />} />
-      <Route path="/create" element={<TeacherHomePage />} />
-      <Route path="/create" element={<CreateTriviaQuestion />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/handleSignIn" element={<TeacherHomePage />} />
+      {/* <Route path="/teacher-home" element={<TeacherHomePage />} /> */}
 
       <Route path="/goToCTQ" element = { <CreateTriviaQuestion/>}/>
       <Route path="/AIResponsePage" element = { <AIResponsePage/>}/>
