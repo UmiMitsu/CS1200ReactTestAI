@@ -1,0 +1,67 @@
+/* Full-page centering */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+.homepage-wrapper {
+  display: flex;
+  justify-content: center;   /* horizontal center */
+  align-items: center;       /* vertical center */
+  min-height: 100vh;
+  background-color: #faf0e6; /* background pane */
+}
+
+/* Card container */
+.homepage-card {
+  width: 402px;              /* match your FXML prefWidth */
+  height: 874px;
+  background-color: #d9c7b4;
+  display: flex;
+  flex-direction: column;    /* stack everything vertically */
+  align-items: center;
+}
+
+/* Logo flush at top */
+.hp-logo {
+  width: 100%;
+  margin: 0;                 /* no space above or below */
+  display: block;
+}
+
+/* Broken line directly under logo */
+.hp-divider {
+  width: 100%;
+  border-top: 2px dashed #000;
+  margin: 0;                 /* no gap between logo and line */
+}
+
+/* Gap between blue and orange groups */
+.hp-gap {
+  height: 1.25rem;
+}
+
+/* Base button style */
+.btn {
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid #5b7c99;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 2rem;       /* spacing between stacked buttons */
+}
+
+/* Blue buttons */
+.btn-blue {
+  background-color: #5b7c99;
+  color: #ffffff;
+}
+
+/* Orange buttons */
+.btn-orange {
+  background-color: #fb8b24;
+  color: #ffffff;
+  border-color: #fb8b24;
+}

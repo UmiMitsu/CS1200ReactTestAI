@@ -9,6 +9,7 @@ import About from "./components/About/About.jsx";
 ///////////// Adya WireFrames //////////
 import CreateTriviaQuestion from "./components/CreateTriviaQuestion/CreateTriviaQuestion.jsx";
 import AIResponsePage from "./components/AIResponsePage/AIResponsePage.jsx";
+import TeacherHomePage from "./components/TeacherHomePage/TeacherHomePage.jsx";
 
 
 
@@ -19,7 +20,12 @@ function App() {
       <Route path="/create-student" element={<CreateStudentAccount />} />
       <Route path="/create-teacher" element={<CreateTeacherAccount />} />
       <Route path="/about" element={<About />} />
+      <Route path="/create" element={<TeacherHomePage />} />
       <Route path="/create" element={<CreateTriviaQuestion />} />
+
+      <Route path="/goToCTQ" element = { <CreateTriviaQuestion/>}/>
+      <Route path="/AIResponsePage" element = { <AIResponsePage/>}/>
+      
 
       <Route path="/ai-response" element={<AIResponsePage />} />
 
