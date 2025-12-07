@@ -1,0 +1,152 @@
+.teacher-homepage {
+  width: 402px;   /* or 100% for responsive */
+  max-width: 100%;
+  height: auto;   /* let content decide height */
+  background-color: #FAF0E6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+body {
+  display: flex;
+  justify-content: center;   /* horizontal center */
+  align-items: center;       /* vertical center */
+  min-height: 100vh;         /* full screen height */
+  margin: 0;
+  
+}
+
+/* Header */
+.teacher-header {
+  background-color: #5B7C99;
+  color: white;
+  text-align: center;
+  padding: 3px;
+}
+
+/* Profile */
+.teacher-profile {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.profile-info {
+  margin-left: 20px;
+}
+
+.teacher-name {
+  font-size: 1.2rem;
+  color: #000;
+}
+
+/* Classes */
+.teacher-classes {
+  padding: 20px;
+}
+
+.teacher-classes h3 {
+  color: black;
+  margin-bottom: 10px;
+}
+
+.class-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.class-name {
+  font-weight: bold;
+}
+
+.class-code {
+  font-size: 0.8rem;
+  color: #777; /* faint font */
+  margin-left: 10px;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.create-class {
+  display: flex;
+  align-items: center;
+  color: #777;
+  background: #eee;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.plus-sign {
+  margin-right: 8px;
+  color: #000;   /* force black */
+  font-weight: bold; /* optional, makes it stand out */
+}
+
+/* Buttons */
+.teacher-actions {
+  padding: 20px;
+}
+
+/* Buttons */
+.btn {
+  width: 100%;
+  margin: 4px 0;          /* slightly less vertical spacing */
+  padding: 4px;           /* reduced height */
+  border: 1px solid #ccc; /* clear border */
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;     /* slightly smaller text */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15); /* subtle shadow */
+}
+
+
+.btn-orange {
+  background-color: #FB8B24;
+  color: #36454F;
+}
+
+.btn-dark {
+  background-color: #36454F;
+  color: #FB8B24;
+}
+
+/* Create New Class row */
+.create-class {
+  display: flex;
+  align-items: center;
+  color: #777;
+  background: 11;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc; /* clear border */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15); /* subtle shadow */
+}
+
+
+/* Footer */
+.teacher-footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: #d9c7b4;
+  padding: 15px;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.3); /* subtle shadow */
+}
+
+.footer-btn {
+  background: none;
+  border: none;
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+  cursor: pointer;
+}

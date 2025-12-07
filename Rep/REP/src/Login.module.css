@@ -1,0 +1,158 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+/* Full-page centering */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+.page-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #0f172a;
+}
+
+.page-card {
+  width: 420px;
+  background-color: #faf0e6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Header */
+.page-header {
+  width: 100%;
+  background-color: #5b7c99;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-family: Roboto, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+}
+
+.login-logo {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  height: 40px;
+}
+
+.login-title {
+  margin: 0;
+}
+
+/* Form */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 300px;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.login-input {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.login-button {
+  background-color: #333;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* SSO */
+.sso-section {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.sso-title {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.sso-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 0.75rem;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 300px;
+  margin: 0.5rem auto;
+  cursor: pointer;
+}
+
+.sso-icon {
+  height: 20px;
+}
+
+/* Footer */
+.page-footer {
+  width: 100%;
+  background-color: #d9c7b4;
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.back-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid black;
+  background-color: black;
+  color: white;
+  font-size: 1.4rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

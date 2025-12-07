@@ -1,0 +1,82 @@
+/* Full-page centering */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+.about-wrapper {
+  display: flex;
+  justify-content: center;   /* horizontal center */
+  align-items: center;       /* vertical center */
+  min-height: 100vh;
+  background-color: #faf0e6; /* page background */
+}
+
+/* Card container */
+.about-card {
+  width: 402px;              /* match FXML prefWidth */
+  background-color: #faf0e6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header pane */
+.about-header {
+  width: 100%;
+  background-color: #5b7c99;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.about-header h2 {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  font-size: 20px;
+}
+
+/* Text pane */
+.about-text-pane {
+  width: 100%;
+  background-color: #e2d5bb;
+  padding: 1rem;
+}
+
+.about-text-pane p {
+  font-size: 22px;
+  font-family: Roboto, sans-serif;
+  margin: 0;
+}
+
+/* Screenshot image */
+.about-image {
+  width: 100%;
+  height: auto;
+  width: 433px;
+  margin-top: 0;
+}
+
+/* Footer pane */
+.about-footer {
+  width: 100%;
+  display: flex; 
+  background-color: #e2d5bb;
+  text-align: right;
+  justify-content: flex-end;
+  padding: 0.5rem 1rem;
+}
+
+.about-back {
+  width: 40px;              /* circle size */
+  height: 40px;
+  border-radius: 50%;       /* makes it a circle */
+  border: 2px solid black;  /* black circle border */
+  background-color: rgb(0, 0, 0);  /* optional: white fill */
+  color: rgb(255, 255, 255);             /* arrow color */
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;            /* center arrow inside */
+  align-items: center;
+  justify-content: center;
+}

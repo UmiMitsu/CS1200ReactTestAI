@@ -1,0 +1,12 @@
+- name: Set up Node
+  uses: actions/setup-node@v3
+  with:
+    node-version: 18
+
+- name: Install deps
+  run: npm install
+
+- name: Build with secret
+  run: npm run build
+  env:
+    VITE_API_KEY: ${{ secrets.VITE_API_KEY }}

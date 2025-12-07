@@ -1,0 +1,155 @@
+/* Wrapper and card */
+.CApage-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #dcb1b1;
+}
+
+.CAcard {
+  width: 402px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;   /* changed: let children stretch to card width */
+}
+
+/* Header bar */
+.cs-header {
+  width: 100%;
+  background-color: #fb8b24;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  color: white;
+  box-sizing: border-box; /* changed: lock to card width */
+}
+
+.cs-header-logo {
+  width: 39px;
+  height: 39px;
+  margin-right: 1rem;
+}
+
+.cs-header h2 {
+  margin: 0;
+  font-size: 20px;
+  font-family: Roboto, sans-serif;
+}
+
+/* Form container */
+.cs-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* changed: left-align fields */
+  padding: 0 1rem;         /* changed: add left padding */
+}
+
+/* Field alignment fix */
+.cs-field {
+  display: flex;
+  flex-direction: column;   /* <-- stack label above input */
+  align-items: flex-start;  /* keep them left-aligned */
+  margin: 0.75rem 0;
+}
+
+
+.cs-field label {
+  margin-bottom: 0.25rem;
+  font-size: 14px;
+  text-align: left;
+}
+
+.cs-field input {
+  width: 211px;            /* fixed width from FXML */
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+}
+
+/* Avatar size fix */
+.cs-avatar-wrapper {
+  align-self: flex-end;        /* <-- move this child to the right edge */
+  width: 100%;                 /* <-- allow internal right alignment to work */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;       /* <-- right-align avatar + plus inside */
+
+  padding-right: 1rem;
+}
+
+.cs-avatar-circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 2px solid black;
+  background-color: #d9d9d9;
+  display: flex;
+  align-items: center;       /* center vertically */
+  justify-content: center;   /* center horizontally */
+}
+
+.cs-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.cs-avatar-plus {
+  
+  margin-top: 0.2rem;
+  transform: translateY(-30px); /* pull it upward closer to the circle */
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid black;
+  background-color: black;
+  /* font-weight: bold; */
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Create account button */
+.cs-create-btn {
+  width: 313px;
+  height: 63px;
+  background-color: #fb8b24;
+  color: white;
+  font-size: 30px;
+  font-family: Roboto, sans-serif;
+  border: none;
+  border-radius: 10px;
+  margin: 1.5rem 0;
+  cursor: pointer;
+}
+
+/* Footer */
+.cs-footer {
+  width: 100%;
+  background-color:  #d9c7b4;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem 1rem;
+  box-sizing: border-box; /* changed: lock to card width */
+  
+}
+
+.cs-back {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid black;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
